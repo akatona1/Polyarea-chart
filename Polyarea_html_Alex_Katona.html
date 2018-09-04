@@ -1,0 +1,36 @@
+<!-- Code written by Alex Katona -->
+<!-- MIT License -->
+<!-- Check out alexkatona.blogspot.com for more info -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Polyarea chart, Alex Katona</title>
+  <meta charset="utf-8"/>
+  <script src="https://d3js.org/d3.v5.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="Polyarea_css_Alex_Katona.css">
+</head>
+
+<body>
+<h1 class="title">Polyarea chart created by Alex Katona</h1>
+<p class = description>Hover your cursor over a point on the line to display a tooltip. See below for a description about this visualization.</p>
+<div id="viz">
+</div>
+<p class = description>A common business question is "How does the percent of total for a category change over time?" Some ways that are typically used to visualize this data include a stacked area chart, stacked bar chart, or line chart with a line for each category. However, there are disadvantages to using these approaches.
+<br></br>
+In a stacked area chart and stacked bar chart, the changing position of the upper and lower bounds make it difficult to determine if the percent of total increases or decreases over time for categories in the middle. Using a line chart with a line for each category, the lines may overlap and result in overcrowding of categories that have a similar percent of total.
+<br></br>
+To solve for these issues, I created a new chart type using D3.js that combines many area charts, hence the name Polyarea chart.
+<br></br>
+The benefits of this chart include the height that shows magnitude (like a bar chart), the ability to see variation over time (like a line chart), and the ability to see how the start and end values over a time period have changed by viewing the middle line (like a slopegraph). Another benefit is that you can see which categories are gaining the most share and which categories they are taking the share from. For example, Category 2 and 5 above started the time period with higher sales percentage shares that decreased and were shifted to Categories 4 and 7 throughout the time period.
+<br></br>
+Also, the chart types mentioned earlier would most likely show what the percent of total is on a daily basis (sales for a category divided by the total sales for that day). The Polyarea chart focuses instead on using "Running Sums," which adds each day's sales to the previous day and recalculates the percent of total sales, which I refer to as the “% of Running Total Sales.” This allows you to see how the percent of total changes over time more easily and with less noise. Note that the categories in the Polyarea chart are sorted descending by the sum of sales for the entire time period so that larger categories can be evaluated first.
+<br></br>
+I consider this a preliminary version of this chart type. I plan to make improvements to the code and add more functionality in the future. For example, generating a scroll bar to accommodate the analysis of more categories and adding the ability to sort by both total sales for the period and the running percent of total of each category at the end of the time period. I will announce future updates on my blog (alexkatona.blogspot.com) and Twitter (@AlexKatona1). A tutorial on how to create a Polyarea chart in Tableau is already available on my blog.
+
+</p>
+</body>
+<footer>
+  <script src="Polyarea_js_Alex_Katona.js" type="text/JavaScript"></script>
+</footer>
+</html>
